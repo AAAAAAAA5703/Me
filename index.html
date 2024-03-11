@@ -103,6 +103,15 @@
 
     <script>
         document.getElementById("myAudio").volume = 0.25; 
+        document.addEventListener('DOMContentLoaded', function () {
+            var myAudio = document.getElementById('myAudio');
+            myAudio.muted = true;
+
+            document.addEventListener('click', function () {
+                myAudio.muted = false;
+                myAudio.play();
+            });
+        });
     </script>
 </body>
 </html>
